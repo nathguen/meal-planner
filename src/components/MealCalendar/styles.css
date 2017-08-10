@@ -1,0 +1,98 @@
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+ul.calendar-days {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 150px;
+}
+
+ul.meal-types {
+    width: 175px;
+}
+
+ul.meal-types li {
+    margin: 0;
+    padding: 0;
+    min-height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-grid {
+    display: flex;
+    flex-direction: row;
+}
+
+.day-cols {
+    width: calc(100% - 150px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li.meal-item {
+    margin: 0;
+    padding: 0;
+    min-height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.meal-item-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(175px - 5px);
+    width: calc(175px - 5px);
+    background: transparent;
+}
+
+.meal-item-card img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.add-meal-card {
+    cursor: pointer;
+}
+
+.search-results ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.search-results li {
+    height: 200px;
+    width: 200px;
+}
+
+.recipe-searching {
+    align-self: center;
+    margin: 0 auto;
+}
+
+.recipe-tile-action {
+    margin-right: 10px;
+}
+
+.meal-item-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 188, 212, .8);
+    color: white;
+    font-size: 14px;
+    padding: 5px 4px;
+}
