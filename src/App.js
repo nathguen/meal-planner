@@ -44,6 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <AppBar 
+          showMenuIconButton={false}
           title="Meal Planner" 
           iconElementRight={
             <FlatButton label="Shopping List" onClick={this.openShoppingModal}/>

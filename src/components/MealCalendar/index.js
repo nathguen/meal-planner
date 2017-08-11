@@ -101,6 +101,7 @@ class MealCalendar extends Component {
                         ))}
                     </ul>
                 </div>
+
                 <Modal 
                     isOpen={searchModalOpen} 
                     overlayClassName="calendar-overlay" 
@@ -115,24 +116,27 @@ class MealCalendar extends Component {
                         }}>
                             <div className="recipe-search">
                                 <h2>Recipe Search</h2>
-                                <TextField hintText="Search for recipe" ref={(ref) => this.foodSearchInput = ref}/>
+                                <TextField hintText="Search for recipe" autoFocus ref={(ref) => this.foodSearchInput = ref}/>
                                 <MdArrowForward onClick={this.foodSearch}/>
                             </div>
                             { (recipeResults.length > 0) && (
                                 <div className="search-results">
                                     <GridList
+                                        cols={4}
                                         cellHeight={180}>
                                         <Subheader>Results for "{searchQuery}"</Subheader>
                                         {recipeResults.map((recipe) => (
                                             <GridTile
+                                                className="recipe-result-tile"
                                                 key={recipe.image}
                                                 title={recipe.label}
+                                                titleBackground="rgba(0,0,0,.4)"
+                                                onClick={() => this.selectRecipe(recipe)}
                                                 subtitle={<span>by <b>{recipe.source}</b></span>}
                                                 actionIcon={<MdAddCircle 
                                                                 className="recipe-tile-action" 
                                                                 color="white" 
-                                                                size={30}
-                                                                onClick={() => this.selectRecipe(recipe)} />}>
+                                                                size={30} />}>
                                                 <img src={recipe.image} />
                                             </GridTile>
                                         ))}

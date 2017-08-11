@@ -96,3 +96,7 @@ li.meal-item {
     font-size: 14px;
     padding: 5px 4px;
 }
+
+.recipe-result-tile {
+    cursor: pointer;
+}
