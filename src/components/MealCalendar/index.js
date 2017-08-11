@@ -63,7 +63,6 @@ class MealCalendar extends Component {
         const mealTypes = ['breakfast', 'lunch', 'dinner']
         const {calendar, food} = this.props
         const {searchModalOpen, searchingFood, recipeResults, searchQuery} = this.state
-        console.log(calendar)
         return (
             <div className="meal-calendar">
                 <ul className="calendar-days">
